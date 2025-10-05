@@ -1,0 +1,375 @@
+{
+    "title" : "Blood Simple.",
+    "year" : 1984,
+    "imdbId" : "tt0086979",
+    "mpaaRating" : "R",
+    "genre" : "Crime, Thriller",
+    "viewerRating" : 7.7,
+    "viewerVotes" : 62352,
+    "runtime" : 99,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "John Getz", 
+        "Frances McDormand", 
+        "Dan Hedaya", 
+        "M. Emmet Walsh"
+    ],
+    "plot" : "A rich but jealous man hires a private investigator to kill his cheating wife and her new man. But, when blood is involved, nothing is simple.",
+    "language" : "English"
+},
+{
+    "title" : "Raising Arizona",
+    "year" : 1987,
+    "imdbId" : "tt0093822",
+    "mpaaRating" : "PG-13",
+    "genre" : "Comedy, Crime, Drama",
+    "viewerRating" : 7.4,
+    "viewerVotes" : 92811,
+    "runtime" : 94,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "Nicolas Cage", 
+        "Holly Hunter", 
+        "Trey Wilson", 
+        "John Goodman"
+    ],
+    "plot" : "When a childless couple of an ex-con and an ex-cop decide to help themselves to one of another family's quintupelets, their lives get more complicated than they anticipated.",
+    "language" : "English"
+},
+{
+    "title" : "Miller's Crossing",
+    "year" : 1990,
+    "imdbId" : "tt0100150",
+    "mpaaRating" : "R",
+    "genre" : "Crime, Drama, Thriller",
+    "viewerRating" : 7.9,
+    "viewerVotes" : 97127,
+    "runtime" : 115,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "Gabriel Byrne", 
+        "Marcia Gay Harden", 
+        "John Turturro", 
+        "Jon Polito"
+    ],
+    "plot" : "Tom Regan, an advisor to a Prohibition-era crime boss, tries to keep the peace between warring mobs but gets caught in divided loyalties.",
+    "language" : "English, Italian, Irish, Yiddish"
+},
+{
+    "title" : "Barton Fink",
+    "year" : 1991,
+    "imdbId" : "tt0101410",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Drama",
+    "viewerRating" : 7.7,
+    "viewerVotes" : 81796,
+    "runtime" : 116,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "John Turturro", 
+        "John Goodman", 
+        "Judy Davis", 
+        "Michael Lerner"
+    ],
+    "plot" : "A renowned New York playwright is enticed to California to write for the movies and discovers the hellish truth of Hollywood.",
+    "language" : "English"
+},
+{
+    "title" : "The Hudsucker Proxy",
+    "year" : 1994,
+    "imdbId" : "tt0110074",
+    "mpaaRating" : "PG",
+    "genre" : "Comedy",
+    "viewerRating" : 7.3,
+    "viewerVotes" : 61661,
+    "runtime" : 111,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "Tim Robbins", 
+        "Jennifer Jason Leigh", 
+        "Paul Newman", 
+        "Charles Durning"
+    ],
+    "plot" : "A naive business graduate is installed as president of a manufacturing company as part of a stock scam.",
+    "language" : "English, Finnish"
+},
+{
+    "title" : "Fargo",
+    "year" : 1996,
+    "imdbId" : "tt0116282",
+    "mpaaRating" : "R",
+    "genre" : "Crime, Drama, Thriller",
+    "viewerRating" : 8.2,
+    "viewerVotes" : 400277,
+    "runtime" : 98,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "William H. Macy", 
+        "Steve Buscemi", 
+        "Peter Stormare", 
+        "Kristin Rudrid"
+    ],
+    "plot" : "Jerry Lundegaard's inept crime falls apart due to his and his henchmen's bungling and the persistent police work of the quite pregnant Marge Gunderson.",
+    "language" : "English"
+},
+{
+    "title" : "The Big Lebowski",
+    "year" : 1998,
+    "imdbId" : "tt0118715",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Crime",
+    "viewerRating" : 8.2,
+    "viewerVotes" : 476302,
+    "runtime" : 117,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "Jeff Bridges", 
+        "John Goodman", 
+        "Julianne Moore", 
+        "Steve Buscemi"
+    ],
+    "plot" : "\"The Dude\" Lebowski, mistaken for a millionaire Lebowski, seeks restitution for his ruined rug and enlists his bowling buddies to help get it.",
+    "language" : "English, German, Hebrew, Spanish"
+},
+{
+    "title" : "Intolerable Cruelty",
+    "year" : 2003,
+    "imdbId" : "tt0138524",
+    "mpaaRating" : "PG-13",
+    "genre" : "Comedy, Crime, Romance",
+    "viewerRating" : 6.3,
+    "viewerVotes" : 71524,
+    "runtime" : 100,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "George Clooney", 
+        "Catherine Zeta-Jones", 
+        "Geoffrey Rush", 
+        "Cedric the Entertainer"
+    ],
+    "plot" : "A revenge-seeking gold digger marries a womanizing Beverly Hills lawyer with the intention of making a killing in the divorce.",
+    "language" : "English, French"
+},
+{
+    "title" : "O Brother, Where Art Thou?",
+    "year" : 2000,
+    "imdbId" : "tt0190590",
+    "mpaaRating" : "PG-13",
+    "genre" : "Comedy, Crime, Music",
+    "viewerRating" : 7.8,
+    "viewerVotes" : 207397,
+    "runtime" : 106,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "George Clooney", 
+        "John Turturro", 
+        "Tim Blake Nelson", 
+        "John Goodman"
+    ],
+    "plot" : "In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them.",
+    "language" : "English"
+},
+{
+    "title" : "O Brother, Where Art Thou?",
+    "year" : 2000,
+    "imdbId" : "tt0190590",
+    "mpaaRating" : "PG-13",
+    "genre" : "Comedy, Crime, Music",
+    "viewerRating" : 7.8,
+    "viewerVotes" : 206682,
+    "runtime" : 106,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "George Clooney", 
+        "John Turturro", 
+        "Tim Blake Nelson", 
+        "John Goodman"
+    ],
+    "plot" : "In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them.",
+    "language" : "English"
+},
+{
+    "title" : "The Man Who Wasn't There",
+    "year" : 2001,
+    "imdbId" : "tt0243133",
+    "mpaaRating" : "R",
+    "genre" : "Crime, Drama",
+    "viewerRating" : 7.6,
+    "viewerVotes" : 80471,
+    "runtime" : 116,
+    "director" : "Joel Coen, Ethan Coen",
+    "cast" : [ 
+        "Billy Bob Thornton", 
+        "Frances McDormand", 
+        "Michael Badalucco", 
+        "James Gandolfini"
+    ],
+    "plot" : "A laconic, chain-smoking barber blackmails his wife's boss and lover for money to invest in dry cleaning, but his plan goes terribly wrong.",
+    "language" : "English, Italian, French"
+},
+{
+    "title" : "The Ladykillers",
+    "year" : 2004,
+    "imdbId" : "tt0335245",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Crime, Thriller",
+    "viewerRating" : 6.2,
+    "viewerVotes" : 78646,
+    "runtime" : 104,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Tom Hanks", 
+        "Irma P. Hall", 
+        "Marlon Wayans", 
+        "J.K. Simmons"
+    ],
+    "plot" : "An eccentric, if not charming Southern professor and his crew pose as a classical ensemble in order to rob a casino, all under the nose of his unsuspecting but sharp old landlady.",
+    "language" : "English, Vietnamese"
+},
+{
+    "title" : "Paris, je t'aime",
+    "year" : 2006,
+    "imdbId" : "tt0401711",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Drama, Romance",
+    "viewerRating" : 7.3,
+    "viewerVotes" : 60536,
+    "runtime" : 120,
+    "director" : "Olivier Assayas, Frèdèric Auburtin, Emmanuel Benbihy, Gurinder Chadha, Sylvain Chomet, Ethan Coen, Joel Coen, Isabel Coixet, Wes Craven, Alfonso Cuarèn, Gèrard Depardieu, Christopher Doyle, Richard LaGravenese, Vincenzo Natali, Alexander Payne, Bruno Podalydès, Walter Salles, Oliver Schmitz, Nobuhiro Suwa, Daniela Thomas, Tom Tykwer, Gus Van Sant",
+    "cast" : [ 
+        "Florence Muller", 
+        "Bruno Podalydos", 
+        "Leyla Bekhti", 
+        "Cyril Descours"
+    ],
+    "plot" : "Through the neighborhoods of Paris, love is veiled, revealed, imitated, sucked dry, reinvented and awakened.",
+    "language" : "French, English, Spanish, Mandarin, Arabic"
+},
+{
+    "title" : "Hail, Caesar!",
+    "year" : 2016,
+    "imdbId" : "tt0475290",
+    "genre" : "Comedy, Drama, Musical",
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Scarlett Johansson", 
+        "Channing Tatum", 
+        "Tilda Swinton", 
+        "Jonah Hill"
+    ],
+    "plot" : "A Hollywood fixer in the 1950s works to keep the studio's stars in line.",
+    "language" : "English"
+},
+{
+    "title" : "No Country for Old Men",
+    "year" : 2007,
+    "imdbId" : "tt0477348",
+    "mpaaRating" : "R",
+    "genre" : "Crime, Drama, Thriller",
+    "viewerRating" : 8.1,
+    "viewerVotes" : 547160,
+    "runtime" : 122,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Tommy Lee Jones", 
+        "Javier Bardem", 
+        "Josh Brolin", 
+        "Woody Harrelson"
+    ],
+    "plot" : "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",
+    "language" : "English, Spanish"
+},
+{
+    "title" : "Burn After Reading",
+    "year" : 2008,
+    "imdbId" : "tt0887883",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Crime, Drama",
+    "viewerRating" : 7,
+    "viewerVotes" : 229866,
+    "runtime" : 96,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "George Clooney", 
+        "Frances McDormand", 
+        "Brad Pitt", 
+        "John Malkovich"
+    ],
+    "plot" : "A disk containing the memoirs of a CIA agent ends up in the hands of two unscrupulous gym employees who attempt to sell it.",
+    "language" : "English"
+},
+{
+    "title" : "To Each His Own Cinema",
+    "year" : 2007,
+    "imdbId" : "tt0973844",
+    "genre" : "Comedy, Drama",
+    "viewerRating" : 6.8,
+    "viewerVotes" : 3343,
+    "runtime" : 100,
+    "director" : "Theodoros Angelopoulos, Olivier Assayas, Bille August, Jane Campion, Youssef Chahine, Kaige Chen, Michael Cimino, Ethan Coen, Joel Coen, David Cronenberg, Jean-Pierre Dardenne, Luc Dardenne, Manoel de Oliveira, Raymond Depardon, Atom Egoyan, Amos Gitai, Alejandro Gonzèlez Ièèrritu, Hsiao-hsien Hou, Aki Kaurismèki, Abbas Kiarostami, Takeshi Kitano, Andrey Konchalovskiy, Claude Lelouch, Ken Loach, David Lynch, Nanni Moretti, Roman Polanski, Raoul Ruiz, Walter Salles, Elia Suleiman, Ming-liang Tsai, Gus Van Sant, Lars von Trier, Wim Wenders, Kar Wai Wong, Yimou Zhang",
+    "cast" : [ 
+        "Isabelle Adjani", 
+        "Pegah Ahangarani", 
+        "Anouk Aimée", 
+        "Leonid Alexeenko"
+    ],
+    "plot" : "A collective film of 33 shorts directed by different directors about their feeling about Cinema.",
+    "language" : "Mandarin, English, French, Spanish, Danish, Finnish, Hebrew, Italian, Japanese, Portuguese, Russian, Yiddish"
+},
+{
+    "title" : "A Serious Man",
+    "year" : 2009,
+    "imdbId" : "tt1019452",
+    "mpaaRating" : "R",
+    "genre" : "Comedy, Drama",
+    "viewerRating" : 7,
+    "viewerVotes" : 93495,
+    "runtime" : 106,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Michael Stuhlbarg", 
+        "Richard Kind", 
+        "Fred Melamed", 
+        "Sari Lennick"
+    ],
+    "plot" : "Larry Gopnik, a Midwestern physics teacher, watches his life unravel over multiple sudden incidents. Though seeking meaning and answers amidst his turmoils, he seems to keep sinking.",
+    "language" : "English, Yiddish, Hebrew"
+},
+{
+    "title" : "True Grit",
+    "year" : 2010,
+    "imdbId" : "tt1403865",
+    "mpaaRating" : "PG-13",
+    "genre" : "Adventure, Drama, Western",
+    "viewerRating" : 7.7,
+    "viewerVotes" : 221231,
+    "runtime" : 110,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Jeff Bridges", 
+        "Hailee Steinfeld", 
+        "Matt Damon", 
+        "Josh Brolin"
+    ],
+    "plot" : "A tough U.S. Marshal helps a stubborn teenager track down her father's murderer.",
+    "language" : "English"
+},
+{
+    "title" : "Inside Llewyn Davis",
+    "year" : 2013,
+    "imdbId" : "tt2042568",
+    "mpaaRating" : "R",
+    "genre" : "Drama, Music",
+    "viewerRating" : 7.4,
+    "viewerVotes" : 80353,
+    "runtime" : 104,
+    "director" : "Ethan Coen, Joel Coen",
+    "cast" : [ 
+        "Oscar Isaac", 
+        "Carey Mulligan", 
+        "Justin Timberlake", 
+        "Ethan Phillips"
+    ],
+    "plot" : "A week in the life of a young singer as he navigates the Greenwich Village folk scene of 1961.",
+    "language" : "English"
+}

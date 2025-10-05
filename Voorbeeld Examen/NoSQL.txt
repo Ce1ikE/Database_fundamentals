@@ -1,0 +1,26 @@
+$match:
+{
+	cuisine:
+	{
+	$in:["Italian","American"]
+	}
+}
+
+$unwind:
+{
+	path: "$grades"
+}
+
+$group:
+{
+	_id: "$borough",
+	SumScore: 
+	{
+		$sum: "$grades.score"	
+	}
+}
+
+$sort:
+{
+	SumScore: -1
+}

@@ -1,0 +1,107 @@
+
+This document contains the solutions to "Opgaven deel1.pdf" of NoSQL
+The following queries have been executed in "MongoDB Compass"
+
+type in the Mongo CLI:
+---------------------
+1) use videos => Creates a new database if "videos" doesn't exist yet
+2) db.createCollection("movies") => Create collection(Table) "movies"
+1) Add data => locate and Import "movies-corrected.json"
+
+
+-------------------------------------------------------------
+Note: 	use "ctrl" + "enter" to add a newline
+	use "shift" + "enter" to push your code to a newline
+-------------------------------------------------------------
+
+Oef1:
+-----
+
+Filter: {"genre":/Comedy/}
+
+Oef2:
+-----
+
+Filter: {"$and" : [{"cast":"Pauline Etienne"},{"cast":"Isabelle Huppert"}]}
+
+
+Oef3:
+-----
+
+CLI: db.movies.deleteOne({"title":"The Nun"})
+
+Oef4:
+-----
+
+Filter: {$and:[{viewerRating:6},{viewerVotes:{$gt:20}}]}
+Projection: {_id:1,title:1,year:1}
+Sort: {title:1}
+
+Oef5:
+-----
+
+Filter: {$or:[{$or:[{cast:"Gérard Depardieu"},{cast:"Cécile De France"}]},{$and:[{cast:"Cécile De France"},{cast:"Gérard Depardieu"}]}]}
+
+Projection: {_id:0,title:1,year:1,imdbId:1,genre:1}
+
+Sort: {title:1}
+
+Oef6:
+-----
+
+Filter: {$and:[{cast:"Gérard Depardieu"},{cast:"Cécile De France"}]}
+
+Projection: {_id:0,title:1,year:1,imdbId:1,genre:1,viewerRating:1,viewerVotes:1}
+
+Sort: {title:1}
+
+Oef7:
+-----
+
+Filter: {viewerVotes:{$exists:1}}
+
+Projection: {_id:0,title:1,year:1,imdbId:1,genre:1,viewerVotes:1}
+
+Sort: {title:1}
+
+
+Oef8:
+-----
+
+Filter: {$or:[{viewerRating:{$exists:0}},{viewerRating:null}]}
+
+Projection: {_id:0,title:1,year:1,imdbId:1,genre:1,viewerRating:1}
+
+Sort: {title:1}
+
+Oef9:
+-----
+
+Filter: {$and:[{viewerRating:{$gt:8.5}},{viewerVotes:{$gte:100}}]}
+
+Projection: {_id:0,title:1,year:1,imdbId:1,genre:1,viewerRating:1,viewerVotes:1}
+
+Sort: {title:1}
+
+Oef10:
+-----
+
+Filter: {director:/Philip/}
+
+Projection: {_id:0,title:1,year:1,director:1,genre:1,cast:1}
+
+Sort: {title:1}
+
+Oef11:
+-----
+
+# Create a variable which contains the content of "coen-movies-2.txt"
+CLI: var NEWmovies = [<Paste here the content of "coen-movies-2.txt">]
+# Next insert the variable "NEWmovies" into the collection "movies"
+     db.movies.insertMany(NEWmovies)
+# Press => "Find" to refresh the collection "movies" => 2683 documents
+
+
+
+
+

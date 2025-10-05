@@ -1,0 +1,164 @@
+This document contains the solutions to "Opgaven deel2.pdf" of NoSQL
+The following queries have been executed in "MongoDB Compass"
+
+type in the Mongo CLI:
+---------------------
+1) use business => Creates a new database if "business" doesn't exist yet
+2) db.createCollection("restaurant") => Create collection(Table) "restaurant"
+1) Add data => locate and Import "restaurants.json"
+
+-------------------------------------------------------------
+Note: 	use "ctrl" + "enter" to add a newline
+	use "shift" + "enter" to push your code to a newline
+-------------------------------------------------------------
+
+Oef1:
+-----
+
+Project: {_id:0,restaurant_id:1,name:1,borough:1,address:1,cuisine:1}
+
+Oef2:
+-----
+
+Filter: {$and:[{borough:"Staten Island"},{name:{$ne:""}},{name:{$exists:1}}]}
+
+Project: {_id:0,name:1,borough:1}
+
+Sort: {name:1}
+
+Limit: 10
+
+Oef3:
+-----
+
+Filter: {$and:[{cuisine:{$ne:"Iranian"}},{"grades.score":{$gt:70}},{"address.coord":{$lt:-65.75}}]}
+
+Project: {_id:0,name:1,cuisine:1}
+
+Sort: {name:1}
+
+Oef4:
+-----
+
+Filter:	{$and:[{$or:[{borough:"Queens of Staten Island"},{borough:"Staten Island"},{borough:"Brooklyn"}]},{name:{$ne:""}}]}
+	of
+	{borough: {$in:['Staten Island','Queens of Staten Island','Brooklyn']},name:{$ne:''}}
+
+Project: {_id:0,name:1,borough:1}
+
+Sort: {name:1,borough:1}
+
+Oef5:
+-----
+
+Filter:	{$and:[{"grades.score":{$in:[2,6]}},{borough:{$in:["Manhattan","Brooklyn"]}},{cuisine:{$nin:["American","Italian"]}}]}
+
+Project: {_id:0,name:1,borough:1}
+
+Sort: {name:1,borough:1}
+
+Oef6:
+-----
+
+=> Klik op Aggregations
+
+=> Add stage: $Match
+	
+	{
+		cuisine: "American"
+	}
+
+=> Add stage after: $Group
+
+	{
+  		_id: "$borough",
+  		aantal:
+  		{
+    			$count:{}
+  		}
+	}
+
+Oef7:
+-----
+
+=> klik op Aggregations
+
+=> Add stage: $Unwind
+
+	{
+  		path: "$grades"
+	}
+
+=> Add stage: $Group
+
+	{
+  		_id:"$cuisine",
+  		maxScore:
+  		{
+    			$max: "$grades.score"
+  		}
+	}
+
+Oef8:
+-----
+
+=> Add stage: $Unwind
+
+	{
+  		path: "$grades"
+	}
+
+=> Add stage: $Group
+
+	{
+  		_id:
+		{
+    			cuisine: "$cuisine",
+    			borough: "$borough"
+		},
+  		maxScore:
+		{
+    			$max: "$grades.score"
+  		}
+	}
+
+Oef9:
+-----
+
+=> Klik op Aggregations
+
+=> Add stage: $Match
+
+	{
+    		"grades.grade":"A",
+    		"grades.score":{$gte:90}
+	}
+
+=> Add stage: $group
+
+	{
+  		_id:"$borough",
+  		count:
+  		{
+    			$count: {}
+  		}
+	}
+
+=> Add stage: $sort
+
+	{
+  		count: -1
+	}
+
+=> Add stage: $limit
+
+	1
+
+
+
+
+
+
+
+
+

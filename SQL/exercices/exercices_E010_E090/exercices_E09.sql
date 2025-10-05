@@ -1,0 +1,132 @@
+				----		Exercices E090		----
+use Northwind2019 
+----(1)
+--select CompanyName , ContactName , ContactTitle , 'Customer' as 'type of contact' , Phone , Fax from Customers
+--union
+--select CompanyName , ContactName , ContactTitle , 'Supplier' as 'type of contact' , Phone , Fax from Suppliers
+
+----(2)
+--select Country , Region from Customers where Region is not null
+--intersect
+--select Country , Region from Suppliers where Region is not null
+
+----(3)
+--select ProductName , UnitsInStock from Products
+--union
+--select 'zz TOTAL' , SUM(UnitsInStock) from Products -- zz zodat total onderaan komt van de lijst
+--select 'aa TOTAL' , SUM(UnitsInStock) from Products -- aa zodat total bovenaan de lijst staat
+
+----(4)
+--select Country , Region from Suppliers where Region is not null
+--except
+--select Country , Region from Customers where Region is not null
+
+----(5)
+--select CompanyName as 'Name', OrderDate , City , 'C' as 'Type' from Customers
+--left join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--union
+--select FirstName+' '+LastName as 'Name' , OrderDate , City,'E' as 'Type' from Employees
+--left join Orders
+--on Employees.EmployeeID = Orders.EmployeeID
+--order by City
+
+----(6)
+--select CompanyName , ProductName , CategoryName from Suppliers
+--left join Products
+--on Suppliers.SupplierID = Products.SupplierID
+--left join Categories
+--on Products.CategoryID = Categories.CategoryID
+--where CategoryName = 'Beverages' or CategoryName = 'Condiments'
+--order by CompanyName
+
+----(7)
+--select CompanyName from Suppliers
+--left join Products
+--on Suppliers.SupplierID = Products.SupplierID
+--left join Categories
+--on Products.CategoryID = Categories.CategoryID
+--where CategoryName = 'Beverages'
+--intersect
+--select CompanyName from Suppliers
+--left join Products
+--on Suppliers.SupplierID = Products.SupplierID
+--left join Categories
+--on Products.CategoryID = Categories.CategoryID
+--where CategoryName = 'Condiments'
+--order by CompanyName
+
+----(8)
+--select CompanyName from Suppliers
+--left join Products
+--on Suppliers.SupplierID = Products.SupplierID
+--left join Categories
+--on Products.CategoryID = Categories.CategoryID
+--where CategoryName = 'Beverages'
+--except
+--select CompanyName from Suppliers
+--left join Products
+--on Suppliers.SupplierID = Products.SupplierID
+--left join Categories
+--on Products.CategoryID = Categories.CategoryID
+--where CategoryName = 'Condiments'
+--order by CompanyName
+
+----(9)
+--select distinct LastName from Employees
+--right join Orders
+--on Employees.EmployeeID = Orders.EmployeeID
+--right join Customers
+--on Orders.CustomerID = (select CustomerID from Customers where City = 'Charleroi')
+--intersect
+--select distinct LastName from Employees
+--right join Orders
+--on Employees.EmployeeID = Orders.EmployeeID
+--right join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--right join Products
+--on [Order Details].ProductID = (select ProductID from Products where ProductName = 'Chang')
+--order by LastName
+
+----(10)
+--select 'Customers' as 'Groep' , COUNT(*) as 'Aantal' from Customers
+--union
+--select 'Employees' as 'Groep' , COUNT(*) as 'Aantal' from Employees
+--union
+--select 'Products' as 'Groep' , COUNT(*) as 'Aantal' from Products
+
+----(11)
+----Shows the revenue per customer per month
+--select ContactName , cast(DATEPART(MONTH,OrderDate) as varchar) as 'Maand' ,round(sum(UnitPrice*Quantity*(1 - Discount)),3) as 'revenue' from Customers
+--left join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--left join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--where DATEPART(YEAR,OrderDate) = '2017'
+--group by DATEPART(MONTH,OrderDate) , ContactName
+--union
+----shows the subtotal per customer
+--select ContactName ,'Subtotaal' as 'Maand' ,round(sum(UnitPrice*Quantity*(1 - Discount)),3) as 'revenue' from Customers
+--left join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--left join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--where DATEPART(YEAR,OrderDate) = '2017'
+--group by ContactName
+--union all
+----shows the overall total
+--select NULL ,'Totaal' as 'Maand' ,round(sum(UnitPrice*Quantity*(1 - Discount)),4) as 'revenue' from Customers
+--left join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--left join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--where DATEPART(YEAR,OrderDate) = '2017'
+
+
+----(12)
+--select ProductName , round(sum(UnitPrice*Quantity*(1 - Discount)) - sum(CurrentUnitCost*Quantity),2) as 'Werkelijke winst' from Products
+--left join [Order Details]
+--on Products.ProductID = [Order Details].ProductID
+--where CurrentUnitPrice between (select (AVG(CurrentUnitPrice))*0.95 from Products) and (select (AVG(CurrentUnitPrice))*1.05 from Products)
+--group by ProductName
+--having round(sum(UnitPrice*Quantity*(1 - Discount)) - sum(CurrentUnitCost*Quantity),2) > 10000

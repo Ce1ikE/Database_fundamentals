@@ -1,0 +1,149 @@
+				----		Voorbereiding oefeningen examen		----
+use Northwind2019 
+----(1)
+
+---- Step 1
+--select CompanyName , round(SUM(Quantity*UnitPrice*(1 - Discount)),2) as 'Totale omzet'
+--from Customers
+--right join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--right join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--group by CompanyName
+
+---- Step 2
+--select CompanyName , round(SUM(Quantity*UnitPrice*(1 - Discount)),2) as 'Totale omzet'
+--from Customers
+--right join Orders
+--on Customers.CustomerID = Orders.CustomerID
+--right join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--right join Products
+--on [Order Details].ProductID = Products.ProductID
+--where Customers.CustomerID in
+--	(
+--	select Customers.CustomerID
+--	from Customers
+--	right join Orders
+--	on Customers.CustomerID = Orders.CustomerID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	right join Products
+--	on [Order Details].ProductID = Products.ProductID
+--	where ProductName = 'Chang'
+--	except
+--	select Customers.CustomerID
+--	from Customers
+--	right join Orders
+--	on Customers.CustomerID = Orders.CustomerID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	right join Products
+--	on [Order Details].ProductID = Products.ProductID
+--	where ProductName = 'Tofu'
+--	)
+--group by CompanyName
+--order by CompanyName
+
+----(2)
+--select distinct Country , CompanyName , ROUND(Quantity*UnitPrice*(1 - Discount),0) as 'Omzet'
+--from Customers cust1
+--right join Orders
+--on cust1.CustomerID = Orders.CustomerID
+--right join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--where ROUND(Quantity*UnitPrice*(1 - Discount),0) = 
+--	(
+--	select ROUND(MAX(Quantity*UnitPrice*(1 - Discount)),0)
+--	from Customers cust2
+--	right join Orders
+--	on cust2.CustomerID = Orders.CustomerID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	where cust2.Country = cust1.Country
+--	)
+--order by Country , CompanyName
+
+
+----(3)
+--select Emp.FirstName+' '+Emp.LastName as 'Employees', Man.FirstName+' '+Man.LastName as 'Manager'
+--from Employees Emp
+--left join Employees Man
+--on Emp.ReportsTo = Man.EmployeeID  
+
+----(4)
+--select  Emp1.FirstName+' '+Emp1.LastName as 'Employees1' ,  Emp2.FirstName+' '+Emp2.LastName as 'Employees2' , Emp1.Title
+--from Employees Emp1
+--left join Employees Emp2
+--on Emp1.Title = Emp2.Title and Emp1.EmployeeID < Emp2.EmployeeID
+
+----(5)
+--select round(AVG(Omzet),0) as 'Gemiddelde omzet per werknemer' from
+--	(
+--	select sum(Quantity*UnitPrice*(1 - Discount)) as 'Omzet'
+--	from Employees
+--	right join Orders
+--	on Employees.EmployeeID = Orders.EmployeeID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	where Title ='sales representative'
+--	group by Employees.EmployeeID
+--	) Data
+
+----(6)
+--select FirstName , LastName , round(sum(Quantity*UnitPrice*(1 - Discount)),0) as 'Totale omzet'
+--from Employees
+--right join Orders
+--on Employees.EmployeeID = Orders.EmployeeID
+--right join [Order Details]
+--on Orders.OrderID = [Order Details].OrderID
+--where Title ='sales representative'
+--group by FirstName , LastName
+--having sum(Quantity*UnitPrice*(1 - Discount)) > 
+--(
+--	select round(AVG(Omzet),0) as 'Gemiddelde omzet per werknemer' 
+--	from
+--	(
+--	select sum(Quantity*UnitPrice*(1 - Discount)) as 'Omzet'
+--	from Employees
+--	right join Orders
+--	on Employees.EmployeeID = Orders.EmployeeID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	where Title ='sales representative'
+--	group by Employees.EmployeeID
+--	) Data
+--)
+
+----(7)
+--select  'Verkopers' as 'Wie?', count(*) as 'Hoeveel'
+--from
+--(
+--	select FirstName , LastName , round(sum(Quantity*UnitPrice*(1 - Discount)),0) as 'Totale omzet'
+--	from Employees
+--	right join Orders
+--	on Employees.EmployeeID = Orders.EmployeeID
+--	right join [Order Details]
+--	on Orders.OrderID = [Order Details].OrderID
+--	where Title ='sales representative'
+--	group by FirstName , LastName
+--	having sum(Quantity*UnitPrice*(1 - Discount)) > 
+--	(
+--		select round(AVG(Omzet),0) as 'Gemiddelde omzet per werknemer' from
+--		(
+--			select sum(Quantity*UnitPrice*(1 - Discount)) as 'Omzet'
+--			from Employees
+--			right join Orders
+--			on Employees.EmployeeID = Orders.EmployeeID
+--			right join [Order Details]
+--			on Orders.OrderID = [Order Details].OrderID
+--			where Title ='sales representative'
+--			group by Employees.EmployeeID
+--		) Data
+--	)
+--) Data2
+--union
+--select 'Niet Verkopers' as 'Wie?', count(*) as 'Hoeveel' 
+--from Employees 
+--where Title != 'Sales representative'
+
